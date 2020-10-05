@@ -9,7 +9,6 @@ import { test } from './test.js'
     return [0, 1].
 */
 
-/* brute force */
 var twoSum = function (nums, target) {
   const len = nums.length
 
@@ -20,7 +19,6 @@ var twoSum = function (nums, target) {
   }
 }
 
-/* cache */
 function cache (nums, target) {
   const len = nums.length
   const cache = new Map()

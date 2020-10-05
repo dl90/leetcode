@@ -42,7 +42,7 @@ var hasPathSum = function (root, sum) {
   return false
 }
 
-// @TODO fix
+// @TODO
 function stack (root, sum) {
   if (!root) return false
   const stack = [root]
@@ -111,11 +111,11 @@ test(
   // [test5, 6] // false
 )
 
-// test(
-//   hasPathSum,
-//   [test1, 22], // true
-//   [test2, 1], // false
-//   [test3, -5], // true
-//   [test4, 0], // false
-//   [test5, 6] // false
-// )
+test(
+  hasPathSum,
+  [test1, 22], // true
+  [test2, 1], // false
+  [test3, -5], // true
+  [test4, 0], // false
+  [test5, 6] // false
+)

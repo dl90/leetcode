@@ -23,9 +23,8 @@ var insert = function (intervals, newInterval) {
 
   for (i = 0; i < intervals.length; i++) {
     const [start, end] = intervals[i]
-    if (newInterval[0] > end) {
-      res.push(intervals[i])
-    } else if (newInterval[1] < start) {
+    if (newInterval[0] > end) res.push(intervals[i])
+    else if (newInterval[1] < start) {
       res.push(newInterval)
       early = true
       break
@@ -35,9 +34,8 @@ var insert = function (intervals, newInterval) {
     }
   }
 
-  if (early) {
-    return res.concat(intervals.splice(i))
-  } else {
+  if (early) return res.concat(intervals.splice(i))
+  else {
     res.push(newInterval)
     return res
   }

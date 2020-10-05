@@ -35,24 +35,23 @@ var addTwoNumbers = function (l1, l2) {
   return root.next
 }
 
-// Definition for singly-linked list.
-function ListNode (val) {
-  this.val = val
-  this.next = null
+class ListNode {
+  constructor (val) {
+    this.val = val
+    this.next = null
+  }
 }
 
 // 2 -> 4 -> 3
 const node1A = new ListNode(2)
 const node1B = new ListNode(4)
-const node1C = new ListNode(3)
-node1B.next = node1C
+node1B.next = new ListNode(3)
 node1A.next = node1B
 
 // 5 -> 6 -> 4
 const node2A = new ListNode(5)
 const node2B = new ListNode(6)
-const node2C = new ListNode(4)
-node2B.next = node2C
+node2B.next = new ListNode(4)
 node2A.next = node2B
 
 test(

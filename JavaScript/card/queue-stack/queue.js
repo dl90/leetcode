@@ -7,9 +7,7 @@ class Queue {
     for (const arg of arguments) {
       if (Array.isArray(arg)) {
         for (const ele of arg) this.enqueue(ele)
-      } else {
-        this.enqueue(arg)
-      }
+      } else this.enqueue(arg)
     }
   }
 

@@ -34,7 +34,6 @@ var maxDepth = function (root) {
   return depth
 }
 
-// Definition for a binary tree node.
 class TreeNode {
   constructor (val, left, right) {
     this.val = (val === undefined ? 0 : val)

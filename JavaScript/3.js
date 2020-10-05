@@ -20,9 +20,9 @@ import { test } from './test.js'
 */
 
 var lengthOfLongestSubstring = function (s) {
-  const seen = new Map() // most recent index of each letter
-  let start = 0 // starting index of the current substring
-  let maxLen = 0 // maximum substring length
+  const seen = new Map()
+  let start = 0
+  let maxLen = 0
 
   for (let i = 0; i < s.length; i++) {
     // if the current char was seen, move the start to (1 + the last index of this char)
