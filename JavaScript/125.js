@@ -19,14 +19,23 @@ var isPalindrome = function (s) {
   if (s.length < 2) return true
   let j = s.length - 1
   let i = 0
-  let _a, _b, a, b
+  let _a, _b
   while (i <= j) {
-    a = s.charCodeAt(i)
-    b = s.charCodeAt(j);
+    const a = s.charCodeAt(i)
+    const b = s.charCodeAt(j)
 
     // ASCII [48 - 57] = numeric, [65 - 90] = capital, [97 - 122] = lowercase
-    (a >= 48 && a <= 57) || (a >= 65 && a <= 90) || (a >= 97 && a <= 122) ? _a = true : (i++, _a = false);
-    (b >= 48 && b <= 57) || (b >= 65 && b <= 90) || (b >= 97 && b <= 122) ? _b = true : (j--, _b = false)
+    if ((a >= 48 && a <= 57) || (a >= 65 && a <= 90) || (a >= 97 && a <= 122)) _a = true
+    else {
+      i++
+      _a = false
+    }
+
+    if ((b >= 48 && b <= 57) || (b >= 65 && b <= 90) || (b >= 97 && b <= 122)) _b = true
+    else {
+      j--
+      _b = false
+    }
 
     if (_a && _b) {
       if ((a <= 57 || b <= 57) && a !== b) return false // numeric

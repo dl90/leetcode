@@ -1,5 +1,4 @@
-'use strict'
-const test = require('./test.js').test
+import { test } from './test.js'
 /*
   Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
 

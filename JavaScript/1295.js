@@ -1,5 +1,4 @@
-'use strict'
-const test = require('./test.js').test
+import { test } from './test.js'
 /*
   Given an array nums of integers, return how many of them contain an even number of digits.
 
@@ -33,7 +32,18 @@ var findNumbers = function (nums) {
   return count
 }
 
+function reduce (nums) {
+  return nums.reduce((acc, cur) => (cur.toString().length % 2 === 0) ? acc + 1 : acc, 0)
+}
+
 test(
-  findNumbers([12, 345, 2, 6, 7896]), // 2
-  findNumbers([555, 901, 482, 1771]) // 1
+  findNumbers,
+  [[12, 345, 2, 6, 7896]], // 2
+  [[555, 901, 482, 1771]] // 1
+)
+
+test(
+  reduce,
+  [[12, 345, 2, 6, 7896]], // 2
+  [[555, 901, 482, 1771]] // 1
 )

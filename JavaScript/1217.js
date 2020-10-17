@@ -39,7 +39,7 @@ Approach:
 */
 var minCostToMoveChips = function (chips) {
   let [odd, even] = [0, 0]
-  for (const ele of chips) ele % 2 == 0 ? even++ : odd++
+  for (const ele of chips) ele % 2 === 0 ? even++ : odd++
   return Math.min(odd, even)
 }
 

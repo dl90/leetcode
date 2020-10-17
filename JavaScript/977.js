@@ -1,5 +1,4 @@
-'use strict'
-const test = require('./test.js').test
+import { test } from './test.js'
 /*
   Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.
 
@@ -38,6 +37,26 @@ function noReverse (A) {
   return res
 }
 
+function bitwise (A) {
+  const res = new Array(A.length)
+  let start = 0
+  let end = A.length - 1
+
+  const abs = (num) => {
+    const mask = num >> 31
+    return (num ^ mask) - mask
+  }
+
+  for (let i = end; i >= 0; i--) {
+    if (A[end] < 0 || abs(A[start]) > A[end]) {
+      res[i] = A[start++] ** 2
+    } else {
+      res[i] = A[end--] ** 2
+    }
+  }
+  return res
+}
+
 test(
   sortedSquares,
   [[-4, -1, 0, 3, 10]], // [0,1,9,16,100]
@@ -46,6 +65,12 @@ test(
 
 test(
   noReverse,
+  [[-4, -1, 0, 3, 10]], // [0,1,9,16,100]
+  [[-7, -3, 2, 3, 11]] // [4,9,9,49,121]
+)
+
+test(
+  bitwise,
   [[-4, -1, 0, 3, 10]], // [0,1,9,16,100]
   [[-7, -3, 2, 3, 11]] // [4,9,9,49,121]
 )
