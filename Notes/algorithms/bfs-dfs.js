@@ -1,31 +1,31 @@
-function bfs(node) {
-  const queue = [node];
-  let res = [];
+function bfs (node) {
+  const queue = [node]
+  const res = []
 
-  let cur;
+  let cur
   while (queue.length) {
-    cur = queue.shift();
-    res.push(cur.val);
+    cur = queue.shift()
+    res.push(cur.val)
 
-    if (cur.left) queue.push(cur.left);
-    if (cur.right) queue.push(cur.right);
+    if (cur.left) queue.push(cur.left)
+    if (cur.right) queue.push(cur.right)
   }
 
-  return res;
+  return res
 }
 
-function dfs(node) {
-  const stack = [node];
-  let res = [];
+function dfs (node) {
+  const stack = [node]
+  const res = []
 
-  let cur;
+  let cur
   while (stack.length) {
-    cur = stack.pop();
-    res.push(cur.val);
+    cur = stack.pop()
+    res.push(cur.val)
 
-    if (cur.left) stack.push(cur.left);
-    if (cur.right) stack.push(cur.right);
+    if (cur.left) stack.push(cur.left)
+    if (cur.right) stack.push(cur.right)
   }
 
-  return res;
+  return res
 }

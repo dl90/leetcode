@@ -1,5 +1,4 @@
 /**
- * @author Don (dl90)
  * @date December 20, 2019
  * @note https://www.youtube.com/watch?v=OQ5jsbhAv_M
 */

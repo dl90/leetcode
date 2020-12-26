@@ -37,6 +37,7 @@ The two’s complement of an integer A is -(A + 1)
 ---
 
 ### binary
+
  > 0b111 => 7
  >
  > 0B1111 => 15
