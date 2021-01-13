@@ -1,9 +1,5 @@
 {
   "name": "leetcode",
-  "version": "1.0.0",
-  "description": "",
-  "main": "1.js",
   "type": "module",
-  "author": "",
   "license": "ISC"
 }

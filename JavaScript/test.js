@@ -2,7 +2,7 @@
  * @param {Function} func Function to execute
  * @param {argument | arguments[]} arguments Arguments passed to the function,
  * - single argument passed directly
- * - multiple arguments passed in an array
+ * - multiple arguments passed in an array [ arg1, arg2 ]
  * - array arguments passed wrapped in an array [ [...], [...] ]
  *
  * @example

@@ -1,7 +1,5 @@
-import { test } from '../test.js'
+import test from '../test.js'
 /*
-  Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
-
   Symbol       Value
   I             1
   V             5
@@ -10,10 +8,6 @@ import { test } from '../test.js'
   C             100
   D             500
   M             1000
-
-  For example, two is written as II in Roman numeral, just two one's added together.
-  Twelve is written as, XII, which is simply X + II.
-  The number twenty seven is written as XXVII, which is XX + V + II.
 
   Roman numerals are usually written largest to smallest from left to right.
   However, the numeral for four is not IIII. Instead, the number four is written as IV.
@@ -54,7 +48,7 @@ import { test } from '../test.js'
     * If C comes before D or M, subtract 100 eg: CD = 400 and CM = 900
 */
 
-var romanToInt = function (s) {
+function romanToInt (s) {
   const map = new Map([
     ['I', 1],
     ['V', 5],

@@ -1,4 +1,4 @@
-import { test } from '../test.js'
+import test from '../test.js'
 /*
   Write a function to find the longest common prefix string amongst an array of strings.
   If there is no common prefix, return an empty string "".
@@ -15,9 +15,9 @@ import { test } from '../test.js'
   Note: All given inputs are in lowercase letters a-z.
 */
 
-var longestCommonPrefix = function (strs) {
+function longestCommonPrefix (strs) {
   const len = strs.length
-  if (len === 0 || strs[0] === '') return ''
+  if (len === 0 || strs.includes('')) return ''
   if (len === 1) return strs[0]
   let compare = ''
   let temp

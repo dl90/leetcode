@@ -1,4 +1,4 @@
-import { test } from '../test.js'
+import test from '../test.js'
 /*
   Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
@@ -28,7 +28,7 @@ import { test } from '../test.js'
     Output: true
 */
 
-var isValid = function (s) {
+function isValid (s) {
   const len = s.length
   if (len === 0) return true
   if (len % 2 === 1) return false
